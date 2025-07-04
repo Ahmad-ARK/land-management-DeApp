@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>🌍 LandChain</h1>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/register">Register</a>
+            <a href="/transfer">Transfer</a>
+            <a href="/view">View</a>
+            <a href="/dashboard">Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <button id="connectWalletBtn">🔌 Connect Wallet</button>
+        <p id="walletAddress">🔌 Wallet not connected</p>
+
+        <%- body %>
+    </main>
+
+    <footer>
+        <p>© 2025 LandChain - FYP by Muhammad Hammad</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="/contract.js"></script>
+</body>
+
+</html>
