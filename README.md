@@ -100,9 +100,9 @@ blockchain-land-registration/
 ```
 
 ## Author
-Ahmad Khalid
-Computer Science Student
-University of Engineering and Technology
+### Ahmad Khalid
+### Computer Science Student
+### University of Engineering and Technology
 
 ## License
 This project is licensed under the MIT License.
