@@ -7,13 +7,17 @@
         <%= title %>
     </title>
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <h1>🌍 LandChain</h1>
         <nav>
-            <a href="/">Dashboard</a>
+            <a href="/">Home</a>
             <a href="/register">Register</a>
             <a href="/transfer">Transfer</a>
             <a href="/view">View</a>
@@ -21,8 +25,8 @@
         </nav>
     </header>
     <main>
-        <button id="connectWalletBtn">🔌 Connect Wallet</button>
-        <p id="walletAddress">🔌 Wallet not connected</p>
+        <button id="connectWalletBtn" style="margin: 0 0 10px 0;">🔌 Connect Wallet</button>
+        <p id="walletAddress" style="width: fit-content; padding: 10px;">🔌 Wallet not connected</p>
 
         <%- body %>
     </main>
@@ -33,6 +37,43 @@
 
     <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
     <script src="/contract.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animate elements when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-up');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.feature-card, .section-header, .stat-card').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Floating blocks animation
+            const blocks = document.querySelectorAll('.floating-block');
+            blocks.forEach(block => {
+                block.style.transform = `translate(${Math.random() * 50 - 25}px, ${Math.random() * 50 - 25}px) rotate(${Math.random() * 20 - 10}deg)`;
+            });
+
+            // Interactive blockchain nodes
+            const nodes = document.querySelectorAll('.blockchain-node');
+            nodes.forEach(node => {
+                node.addEventListener('mouseover', () => {
+                    node.style.transform = 'scale(1.2)';
+                    node.style.boxShadow = '0 0 30px rgba(0, 230, 118, 0.8)';
+                });
+
+                node.addEventListener('mouseout', () => {
+                    node.style.transform = '';
+                    node.style.boxShadow = '0 0 20px rgba(0, 176, 255, 0.5)';
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
