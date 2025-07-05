@@ -109,14 +109,6 @@ This project is licensed under the MIT License.
 
 ## ⭐️ Star this repo if you found it helpful. Good luck with your first block chain project
 
----
-
-Let me know if you'd like a version with:
-- Screenshot placeholders removed
-- Your actual GitHub URL inserted
-- Auto-deploy instructions for Netlify or Vercel
-
-You're now ready to make your GitHub repo shine for FYP submission and portfolio 🚀✅
 
 
 
