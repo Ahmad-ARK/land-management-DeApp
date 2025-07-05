@@ -101,13 +101,13 @@ blockchain-land-registration/
 
 ## Author
 Ahmad Khalid
-Final Year Computer Science Student
+Computer Science Student
 University of Engineering and Technology
 
 ## License
 This project is licensed under the MIT License.
 
-## ⭐️ Star this repo if you found it helpful. Good luck with your FYP submission!
+## ⭐️ Star this repo if you found it helpful. Good luck with your first block chain project
 
 ---
 
